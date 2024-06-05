@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width:80%;
+}
+
+.search-bar {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.profile-name {
+    margin-top: 10px;
+}
+
+.vertical-bar {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    justify-content:space-between;
+    width:100%;
+}
+
+.categories a {
+	
+    padding: 10px 0;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.description {
+    margin: 10px 0;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-actions button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.offers-section {
+    margin-top: 20px;
+    display:flex;
+    flex-direction:row;
+    
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+.offers-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.offer-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.offer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.offer-description {
+    margin: 10px 0;
+}
+
+.offer-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer-actions button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

@@ -4,7 +4,9 @@ USE blogDataBase;
 
 CREATE TABLE Producteur (
     id_producteur INT PRIMARY KEY AUTO_INCREMENT,
-    nom_producteur VARCHAR(255) NOT NULL
+    nom_producteur VARCHAR(255) NOT NULL,
+   	password_utilisateur VARCHAR(255) NOT NULL
+
 );
 
 CREATE TABLE Utilisateur (
