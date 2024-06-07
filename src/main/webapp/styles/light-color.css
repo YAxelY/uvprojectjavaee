@@ -1,0 +1,12 @@
+@charset "UTF-8";
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container, .home-container {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Add more styles for light theme as needed */
