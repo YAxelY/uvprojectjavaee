@@ -11,7 +11,7 @@
         </form>
         <button class="btn" onclick="location.href='protected/gererProfile.jsp'">Gérer Profil</button>
         <button class="btn">Sign In</button>
-        <button class="btn">Sign Out</button>
+        <button class="btn" href="logout">Sign Out</button>
         <div class="separator"></div>
         <a href="accueil.jsp" class="menu-item">Accueil</a>
         <a href="communications.jsp" class="menu-item">Communications</a>

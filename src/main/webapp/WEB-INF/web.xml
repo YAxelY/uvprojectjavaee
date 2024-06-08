@@ -34,5 +34,14 @@
         <servlet-name>Login</servlet-name>
         <url-pattern>/loginr</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.example.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
   
 </web-app>
