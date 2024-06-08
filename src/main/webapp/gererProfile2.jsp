@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.example.entities.Profile" %>
+<%@ page import="beans.Profile" %>
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page import="javax.servlet.http.HttpServletRequest" %>
 <%@ page import="javax.servlet.http.HttpServletResponse" %>
@@ -19,7 +19,7 @@
         <div class="profile-section">
             <h2>Mettre à Jour Profil</h2>
             <%
-                HttpSession session = request.getSession(false);
+                HttpSession Session = request.getSession(false);
                 Profile profile = (Profile) session.getAttribute("profile");
                 
                 if (profile == null) {

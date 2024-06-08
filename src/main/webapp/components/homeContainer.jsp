@@ -75,6 +75,8 @@
                 </div>
             </div>
             <!-- Add more offer cards as needed -->
+            
+            
         </div>
     </div>
     
