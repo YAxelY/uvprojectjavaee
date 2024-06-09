@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class Database {
     
-    private static final String URL = "jdbc:postgresql://localhost:5432/javaeetest00";
+    private static final String URL = "jdbc:postgresql://localhost:5432/javaeetest01";
     private static final String USER = "remoteuser";
     private static final String PASSWORD = "remote";
     

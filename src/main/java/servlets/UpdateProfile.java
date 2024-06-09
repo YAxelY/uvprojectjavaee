@@ -106,6 +106,6 @@ public class UpdateProfile extends HttpServlet {
             }
         }
 
-        response.sendRedirect("homeGuest.jsp");
+        response.sendRedirect("Protected/homeClient.jsp");
     }
 }

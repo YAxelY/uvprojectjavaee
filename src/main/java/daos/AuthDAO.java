@@ -1,10 +1,24 @@
 package daos;
 
+import java.sql.SQLException;
+import beans.User;
 
 public class AuthDAO {
-    public boolean authenticate(String username, String password) {
-        // For demonstration purposes, we're using hardcoded values.
-        // In a real application, you'd query the database or another user store.
-        return "admin".equals(username) && "password".equals(password);
+
+    public boolean authenticate(String identifier, String password) {
+        UserDAO userDAO = new UserDAOImpl();
+        try {
+            User userByUsername = userDAO.getByUsername(identifier);
+            User userByEmail = userDAO.getByEmail(identifier);
+
+            if (userByUsername != null && userByUsername.getPassword().equals(password)) {
+                return true;
+            } else if (userByEmail != null && userByEmail.getPassword().equals(password)) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

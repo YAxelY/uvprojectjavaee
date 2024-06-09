@@ -1,20 +1,18 @@
-<%@ page import="java.util.List" %>
-<%@ page import="beans.Profile" %>
- <div class="home-container">
+
+   <div class="home-container">
         <!-- Search Bar -->
- 		<div class="search-bar">
- 		  <div class="menu-button-div">
- 		   <span class="menu-button" onclick="toggleSidebar()">  Menu</span>
-            <span class="theme-button" onclick="toggleTheme()"> Theme</span>
+        <div class="search-bar">
+            <div class="menu-button-div">
+                <span class="menu-button" onclick="toggleSidebar()">Menu</span>
+                <span class="theme-button" onclick="toggleTheme()">Theme</span>
             </div>
-           
             <input type="text" placeholder="Search...">
         </div>
 
         <!-- Profile Section -->
         <div class="profile-section">
             <div class="profile">
-             <h2>Profiles</h2>
+                <h2>Profiles</h2>
             </div>
             <div class="vertical-bar"></div>
             <div class="categories">
@@ -26,10 +24,10 @@
 
         <!-- Cards Section -->
         <div class="cards-section">
-            <%
-                List<Profile> profiles = (List<Profile>) request.getAttribute("profiles");
-                if (profiles != null) {
-                    for (Profile profile : profiles) {
+            <% 
+                List<beans.Profile> profiles = (List<beans.Profile>) request.getAttribute("profiles");
+                if (profiles != null && !profiles.isEmpty()) {
+                    for (beans.Profile profile : profiles) {
             %>
             <div class="card">
                 <img src="<%= profile.getPhotoProfile() != null ? profile.getPhotoProfile() : "img/graduation.png" %>" alt="Photo">
@@ -39,8 +37,8 @@
                     <%= profile.getTelephoneProfile() %>
                 </div>
                 <div class="card-actions">
-                    <button>View</button>
-                    <button>Message</button>
+                    <button onclick="viewProfile(<%= profile.getIdProfile() %>)">View</button>
+                    <button onclick="messageProfile(<%= profile.getIdProfile() %>)">Message</button>
                 </div>
             </div>
             <% 
@@ -51,34 +49,7 @@
             <%
                 }
             %>
-            <!-- Add more cards as needed -->
         </div>
-
-        <!-- Offers Section -->
-        <div class="offers-section">
-            <div class="separator"></div>
-            <div class="offers-title">Offers</div>
-            <div class="offer-card">
-                <img src="offer-photo.jpg" alt="Offer Photo">
-                <div class="offer-description">This is a description of the offer.</div>
-                <div class="offer-actions">
-                    <button>View Offer</button>
-                    <button>Contact</button>
-                </div>
-            </div>
-            <div class="offer-card">
-                <img src="offer-photo.jpg" alt="Offer Photo">
-                <div class="offer-description">This is a description of the offer.</div>
-                <div class="offer-actions">
-                    <button>View Offer</button>
-                    <button>Contact</button>
-                </div>
-            </div>
-            <!-- Add more offer cards as needed -->
-            
-            
-        </div>
-    </div>
     
     
          <script>

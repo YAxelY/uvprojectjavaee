@@ -14,9 +14,9 @@
     <input type="checkbox" id="check">
     <div class="login form">
       <header>Login</header>
-      <form action="#">
-        <input type="text" placeholder="Enter your email or username" required>
-        <input type="password" placeholder="Enter your password" required>
+      <form action="login" method="post">
+        <input type="text" name="username" placeholder="Enter your email or username" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
         <p style="color:red;">
              <%= request.getAttribute("errorMessage") != null ? request.getAttribute("errorMessage") : "" %>
       </p>
@@ -31,14 +31,21 @@
     </div>
     <div class="registration form">
       <header>Signup</header>
-      <form action="#">
-        <input type="text" placeholder="Enter your email" required>
-        <input type="password" placeholder="Create a password" required>
-        <input type="password" placeholder="Confirm your password" required>
-        <input type="button" class="button" value="Signup">
+      <form action="signup" method="post">
+        <input type="text" name="username" placeholder="Enter your username" required>
+        <input type="password" name="password" placeholder="Create a password" required>
+        <input type="password" name ="confirmPassword" placeholder="Confirm your password" required>
+        <input type="submit" class="button" value="Signup">
       </form>
       
-      <div class="signup">
+      <% if(request.getAttribute("form") != null) { %>
+    <script>
+        document.getElementById("check").checked = true;
+    </script>
+<% } %>
+  <p style="color:red;">
+             <%= request.getAttribute("errorMessage1") != null ? request.getAttribute("errorMessage1") : "" %>
+      </p> <div class="signup">
         <span class="signup">Already have an account?
          <label for="check">Login</label>
         </span>
