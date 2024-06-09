@@ -25,12 +25,5 @@
     <res-auth>Container</res-auth>
 </resource-ref>
 
-<servlet>
-        <servlet-name>Logint</servlet-name>
-        <servlet-class>servlets.Login</servlet-class>
-    </servlet>
-
-
-
   
 </web-app>

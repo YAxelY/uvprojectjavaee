@@ -10,7 +10,9 @@ import beans.Profile;
 
 
 public class ProfileDAOImpl  implements ProfileDAO {
-
+	private static final String URL = "jdbc:postgresql://localhost:5432/javaeetest1";
+    private static final String USER = "postgres";
+    private static final String PASSWORD = "ks";
 	
 
     public Profile get(int id) throws SQLException {
@@ -92,23 +94,6 @@ public class ProfileDAOImpl  implements ProfileDAO {
         ps.setString(6, profile.getPhotoProfile());
         ps.setInt(7, profile.getIdProducteur());
         ps.setInt(8, profile.getIdProfile());
-        int result = ps.executeUpdate();
-        Database.closePreparedStatement(ps);
-        Database.closeConnection(con);
-        return result;
-    }
-
-    public int insert1(Profile profile) throws SQLException {
-        Connection con = Database.getConnection();
-        String sql = "INSERT INTO Profile (nom_profile, prenom_profile, email_profile, password_profile, telephone_profile, photo_profile) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        PreparedStatement ps = con.prepareStatement(sql);
-        ps.setString(1, profile.getNomProfile());
-        ps.setString(2, profile.getPrenomProfile());
-        ps.setString(3, profile.getEmailProfile());
-        ps.setString(4, profile.getPasswordProfile());
-        ps.setString(5, profile.getTelephoneProfile());
-        ps.setString(6, profile.getPhotoProfile());
-//        ps.setInt(7, profile.getIdProducteur());
         int result = ps.executeUpdate();
         Database.closePreparedStatement(ps);
         Database.closeConnection(con);
