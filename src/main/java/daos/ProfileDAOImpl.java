@@ -10,9 +10,6 @@ import beans.Profile;
 
 
 public class ProfileDAOImpl  implements ProfileDAO {
-	private static final String URL = "jdbc:postgresql://localhost:5432/javaeetest1";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "ks";
 	
 
     public Profile get(int id) throws SQLException {
