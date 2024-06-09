@@ -9,9 +9,10 @@
                 <input type="file" id="profilePictureInput" name="profilePicture" accept="image/*" style="display:none;" onchange="document.getElementById('profilePictureForm').submit();">
             </div>
         </form>
-
-        <button class="btn" onclick="location.href='login.jsp'">Sign In</button>
+        <button class="btn" onclick="location.href='protected/gererProfile.jsp'">Gérer Profil</button>
        
+       
+        <button class="btn" href="logout">Sign Out</button>
         <div class="separator"></div>
         <a href="accueil.jsp" class="menu-item">Accueil</a>
         <a href="communications.jsp" class="menu-item">Communications</a>
