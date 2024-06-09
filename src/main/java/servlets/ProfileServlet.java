@@ -70,13 +70,12 @@ public class ProfileServlet extends HttpServlet {
 
         try {
 			profileDAO.insert(profile);
+			  response.sendRedirect("success.jsp");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+			request.setAttribute("errorMessage", "Database error: " + e.getMessage());
+            request.getRequestDispatcher("error.jsp").forward(request, response);
 		}
-
-        response.sendRedirect("success.jsp");
-		
 		
 		doGet(request, response);
 	}

@@ -15,4 +15,5 @@
         <div class="separator"></div>
         <a href="accueil.jsp" class="menu-item">Accueil</a>
         <a href="communications.jsp" class="menu-item">Communications</a>
+        <a href="notifications.jsp">Notifications</a>
  </div>

@@ -14,7 +14,7 @@ public class UserDAOImpl implements UserDAO {
     public User get(int id) throws SQLException {
         Connection con = Database.getConnection();
         User user = null;
-        String sql = "SELECT id, nom_user, adresse_email, password, role FROM utilisateurs WHERE id = ?";
+        String sql = "SELECT id, nomUser, adresseEmail, password, role FROM utilisateurs WHERE id = ?";
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setInt(1, id);
         ResultSet rs = ps.executeQuery();
