@@ -22,34 +22,45 @@
             </div>
         </div>
 
-        <!-- Cards Section -->
-        <div class="cards-section">
-            <% 
-                List<beans.Profile> profiles = (List<beans.Profile>) request.getAttribute("profiles");
-                if (profiles != null && !profiles.isEmpty()) {
-                    for (beans.Profile profile : profiles) {
-            %>
-            <div class="card">
-                <img src="<%= profile.getPhotoProfile() != null ? profile.getPhotoProfile() : "img/graduation.png" %>" alt="Photo">
-                <div class="description">
-                    <%= profile.getNomProfile() %> <%= profile.getPrenomProfile() %><br>
-                    <%= profile.getEmailProfile() %><br>
-                    <%= profile.getTelephoneProfile() %>
-                </div>
-                <div class="card-actions">
-                    <button onclick="viewProfile(<%= profile.getIdProfile() %>)">View</button>
-                    <button onclick="messageProfile(<%= profile.getIdProfile() %>)">Message</button>
-                </div>
-            </div>
-            <% 
-                    }
-                } else {
-            %>
-            <div>No profiles found.</div>
-            <%
-                }
-            %>
+  <!-- Cards Section -->
+<div class="cards-section">
+    <% 
+        List<beans.Profile> profiles = (List<beans.Profile>) request.getAttribute("profiles");
+        if (profiles != null && !profiles.isEmpty()) {
+            for (beans.Profile profile : profiles) {
+    %>
+    <div class="card">
+        <img src="<%= profile.getPhotoProfile() != null ? profile.getPhotoProfile() : "img/graduation.png" %>" alt="Photo">
+        <div class="description">
+            <%= profile.getNomProfile() %> <%= profile.getPrenomProfile() %><br>
+            <%= profile.getEmailProfile() %><br>
+            <%= profile.getTelephoneProfile() %>
         </div>
+        <div class="card-actions">
+            <!-- View Profile Form -->
+            <form action="viewController" method="post">
+                <input type="hidden" name="idProfile" value="<%= profile.getIdProfile() %>">
+                <input type="hidden" name="username" value="<%= session.getAttribute("username") %>">
+                <input type="submit" value="View">
+            </form>
+            <!-- Message Profile Form -->
+            <form action="messageController" method="post">
+                <input type="hidden" name="idProfile" value="<%= profile.getIdProfile() %>">
+                <input type="hidden" name="username" value="<%= session.getAttribute("username") %>">
+                <input type="submit" value="Message">
+            </form>
+        </div>
+    </div>
+    <% 
+            }
+        } else {
+    %>
+    <div>No profiles found.</div>
+    <%
+        }
+    %>
+</div>
+
     
     
          <script>

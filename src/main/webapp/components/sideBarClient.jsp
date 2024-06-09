@@ -9,7 +9,7 @@
                 <input type="file" id="profilePictureInput" name="profilePicture" accept="image/*" style="display:none;" onchange="document.getElementById('profilePictureForm').submit();">
             </div>
         </form>
-        <button class="btn" onclick="location.href='protected/gererProfile.jsp'">Creer profile</button>
+        <button class="btn" onclick="location.href='uploadProfile.jsp'">Creer profile</button>
         
         <button class="btn"onclick="location.href='logout'">Sign Out</button>
         <div class="separator"></div>

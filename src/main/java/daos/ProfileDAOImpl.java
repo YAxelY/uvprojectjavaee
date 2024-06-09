@@ -81,7 +81,7 @@ public class ProfileDAOImpl  implements ProfileDAO {
 
     public int save(Profile profile) throws SQLException {
         Connection con = Database.getConnection();
-        String sql = "UPDATE Profile SET nom_profile = ?, prenom_profile = ?, email_profile = ?, password_profile = ?, telephone_profile = ?, photo_profile = ?, id_producteur = ? WHERE id_profile = ?";
+        String sql = "UPDATE Profile SET nom_profile = ?, prenom_profile = ?, email_profile = ?, password_profile = ?, telephone_profile = ?, photo_profile = ? WHERE id_profile = ?";
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setString(1, profile.getNomProfile());
         ps.setString(2, profile.getPrenomProfile());
@@ -89,8 +89,8 @@ public class ProfileDAOImpl  implements ProfileDAO {
         ps.setString(4, profile.getPasswordProfile());
         ps.setString(5, profile.getTelephoneProfile());
         ps.setString(6, profile.getPhotoProfile());
-        ps.setInt(7, profile.getIdProducteur());
-        ps.setInt(8, profile.getIdProfile());
+   
+        ps.setInt(7, profile.getIdProfile());
         int result = ps.executeUpdate();
         Database.closePreparedStatement(ps);
         Database.closeConnection(con);
@@ -133,12 +133,7 @@ public class ProfileDAOImpl  implements ProfileDAO {
             values.append("?, ");
             parameters.add(profile.getPhotoProfile());
         }
-        if (profile.getIdProducteur() != 0) {
-            sql.append("id_producteur, ");
-            values.append("?, ");
-            parameters.add(profile.getIdProducteur());
-        }
-        
+     
         // Remove the last comma and space, and close the parentheses
         sql.setLength(sql.length() - 2);
         values.setLength(values.length() - 2);
@@ -200,11 +195,7 @@ public class ProfileDAOImpl  implements ProfileDAO {
 	        sql.append("photo_profile = ?, ");
 	        parameters.add(profile.getPhotoProfile());
 	    }
-	    if (profile.getIdProducteur() != 0) {
-	        sql.append("id_producteur = ?, ");
-	        parameters.add(profile.getIdProducteur());
-	    }
-	    
+	  
 	    // Remove the last comma and space
 	    sql.setLength(sql.length() - 2);
 	    

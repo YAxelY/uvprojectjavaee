@@ -12,7 +12,8 @@ public class Profile implements Serializable {
     private String passwordProfile;
     private String telephoneProfile;
     private String photoProfile;
-    private int idProducteur;
+  
+
 
     // Getters and Setters
 
@@ -72,19 +73,13 @@ public class Profile implements Serializable {
         this.photoProfile = photoProfile;
     }
 
-    public int getIdProducteur() {
-        return idProducteur;
-    }
-
-    public void setIdProducteur(int idProducteur) {
-        this.idProducteur = idProducteur;
-    }
+  
 
 	@Override
 	public String toString() {
 		return "Profile [idProfile=" + idProfile + ", nomProfile=" + nomProfile + ", prenomProfile=" + prenomProfile
 				+ ", emailProfile=" + emailProfile + ", passwordProfile=" + passwordProfile + ", telephoneProfile="
-				+ telephoneProfile + ", photoProfile=" + photoProfile + ", idProducteur=" + idProducteur + "]";
+				+ telephoneProfile + ", photoProfile=" + photoProfile +"]";
 	}
     
 }
