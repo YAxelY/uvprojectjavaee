@@ -14,7 +14,7 @@
         <p class="profile-name">Name: <%= ((beans.Profile) request.getAttribute("profile")).getNomProfile() %> <%= ((beans.Profile) request.getAttribute("profile")).getPrenomProfile() %></p>
         <p class="profile-email">Email: <%= ((beans.Profile) request.getAttribute("profile")).getEmailProfile() %></p>
         <p class="profile-phone">Phone: <%= ((beans.Profile) request.getAttribute("profile")).getTelephoneProfile() %></p>
-      
+        <hola>
     </div>
 </body>
 </html>
