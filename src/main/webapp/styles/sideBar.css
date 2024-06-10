@@ -30,11 +30,12 @@
             position: fixed;
             width: 250px;
             height: 100%;
-            background-color: #333;
+            background-color:bisque;
             color: white;
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 60px;
+            opacity: 0,5;
         }
         
         .sidebar a {
@@ -86,6 +87,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
+    
 }
 
 .separator {

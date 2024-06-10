@@ -1,5 +1,10 @@
 body {
     font-family: Arial, sans-serif;
+    
+     background-image: url("../img/fleur.jpg");
+     background-color: greenyellow;
+    
+    
 }
 
 
@@ -21,8 +26,15 @@ body {
 	display:flex;
 	flex-direction:row;
     width: 100%;
+    background-color:white;
+    color: black;
     
     justify-content:space-between;
+}
+.search-bar:hover{
+	background-color:skyblue;
+	font-size: 1000;
+	opacity: 1,5;
 }
 .menu-button-div{
 	display:flex;
@@ -86,6 +98,8 @@ body {
 }
 
 .categories a {
+	font-size: 1000;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman';
 	
     padding: 10px 0;
     text-decoration: none;
@@ -93,6 +107,23 @@ body {
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #ccc;
+      display: inline-block; /* Pour permettre le padding et la mise en forme */
+    padding: 10px 20px; /* Espace autour du texte */
+    background-color: white; /* Couleur de fond */
+    color: black; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+ 
+    border: 2px solid #4CAF50; /* Bordure */
+    border-radius: 25px; /* Coins arrondis pour un effet d'encerclement */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour les changements de style */
+}
+    
+
+.categories a:hover{
+	color: black; /* Couleur de texte rose */
+    font-size: 18px; /* Augmentation de la taille du texte */
+    
+	
 }
 
 .cards-section {
@@ -138,12 +169,17 @@ body {
     display:flex;
     flex-direction:row;
     
+    
+}
+.profilf{
+	font-size: 200%;
+	color: white;
 }
 
 .separator {
     width: 100%;
     height: 1px;
-    background-color: #ccc;
+    background-color:white;
     margin-bottom: 20px;
 }
 
@@ -151,6 +187,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
+    color: white;
 }
 
 .offer-card {
@@ -170,11 +207,13 @@ body {
 
 .offer-description {
     margin: 10px 0;
+    color: white;
 }
 
 .offer-actions {
     display: flex;
     justify-content: space-between;
+   
 }
 
 .offer-actions button {
@@ -182,5 +221,11 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-color: white;
+    color: black;
+}
+.profile{
+	color: white;
+	font-size: 300%;
 }
 

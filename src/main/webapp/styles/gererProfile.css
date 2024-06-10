@@ -2,15 +2,16 @@
 /* style.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    
     margin: 0;
     padding: 0;
+    background-image: url("../img/fleur.jpg");
 }
 
 .container {
     width: 60%;
     margin: 0 auto;
-    background-color: #fff;
+    
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
@@ -60,7 +61,7 @@ h1 {
 }
 
 .profile-section input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: burlywood;
     color: white;
     padding: 10px 20px;
     border: none;

@@ -5,7 +5,7 @@
  		<div class="search-bar">
  		  <div class="menu-button-div">
  		   <span class="menu-button" onclick="toggleSidebar()">  Menu</span>
-            <span class="theme-button" onclick="toggleTheme()"> Theme</span>
+            <!--  <span class="theme-button" onclick="toggleTheme()"> Theme</span>-->
             </div>
            
             <input type="text" placeholder="Search...">
@@ -47,7 +47,7 @@
                     }
                 } else {
             %>
-            <div>No profiles found.</div>
+            <div class="profilf">No profiles found.</div>
             <%
                 }
             %>
@@ -66,7 +66,7 @@
                     <button>Contact</button>
                 </div>
             </div>
-            <div class="offer-card">
+           <!--  <div class="offer-card">
                 <img src="offer-photo.jpg" alt="Offer Photo">
                 <div class="offer-description">This is a description of the offer.</div>
                 <div class="offer-actions">
